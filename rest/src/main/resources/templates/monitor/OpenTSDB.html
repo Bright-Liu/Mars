@@ -1,0 +1,53 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Getting Started: Serving Web Content</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <style>
+        table th {
+            border: 2px solid black;
+        }
+    </style>
+</head>
+<body>
+<p th:text="${jvmStatsJson}"/>
+
+<table>
+    <thead>
+    <tr>
+        <th>pendingBreached</th>
+        <th>writesBlocked</th>
+        <th>inflightBreached</th>
+        <th>dead</th>
+        <th>rpcsInFlight</th>
+        <th>rpcsSent</th>
+        <th>rpcResponsesUnknown</th>
+        <th>pendingBatchedRPCs</th>
+        <th>endpoint</th>
+        <th>rpcResponsesTimedout</th>
+        <th>rpcid</th>
+        <th>rpcsTimedout</th>
+        <th>pendingRPCs</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr th:each="rc:${regionClientsStatsJson}">
+        <th th:text="${rc.pendingBreached}"></th>
+        <th th:text="${rc.writesBlocked}"></th>
+        <th th:text="${rc.inflightBreached}"></th>
+        <th th:text="${rc.dead}"></th>
+        <th th:text="${rc.rpcsInFlight}"></th>
+        <th th:text="${rc.rpcsSent}"></th>
+        <th th:text="${rc.rpcResponsesUnknown}"></th>
+        <th th:text="${rc.pendingBatchedRPCs}"></th>
+        <th th:text="${rc.endpoint}"></th>
+        <th th:text="${rc.rpcResponsesTimedout}"></th>
+        <th th:text="${rc.rpcid}"></th>
+        <th th:text="${rc.rpcsTimedout}"></th>
+        <th th:text="${rc.pendingRPCs}"></th>
+    </tr>
+    </tbody>
+</table>
+
+</body>
+</html>
