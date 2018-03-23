@@ -6,7 +6,6 @@
     <groupId>cn.bright.mars</groupId>
     <artifactId>common</artifactId>
     <version>0.0.1.RELEASE</version>
-    <packaging>jar</packaging>
 
     <name>mars-common</name>
     <description>Mars Common</description>
